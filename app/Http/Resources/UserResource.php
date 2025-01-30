@@ -19,7 +19,7 @@ class UserResource extends JsonResource
 	    'name' => $this->name,
 	    'email' => $this->email,
 	    'cpf' => $this->cpf,
-	    'created_at' => $this->crated_at->format('d/m/Y')
+	    'created_at' => $this->created_at->format('d/m/Y')
 	];
 	
     }

@@ -38,7 +38,10 @@ class UserAuthController extends Controller
         }
 
 	$token = $user->createToken('v-token')->plainTextToken;
-	return response()->json(['token' => $token], 200);
+	return response()->json([
+	    'user_id' => $user->id,
+	    'token' => $token
+	], 200);
     }
 
     public function logout()
